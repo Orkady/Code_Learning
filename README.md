@@ -7,3 +7,5 @@
 GPL
 
 检测git的stage区域
+
+测试git的暂存区
