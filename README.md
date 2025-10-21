@@ -5,3 +5,5 @@
 再次测试
 
 GPL
+
+检测git的stage区域
