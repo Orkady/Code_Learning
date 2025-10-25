@@ -53,6 +53,10 @@ def digit_distance(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    if n < 10:
+        return 0
+    else:
+        return abs((n // 10 % 10) - (n % 10)) + digit_distance(n // 10)
 
 
 def interleaved_sum(n, f_odd, f_even):
@@ -77,6 +81,13 @@ def interleaved_sum(n, f_odd, f_even):
     True
     """
     "*** YOUR CODE HERE ***"
+    def helper(k, f1, f2):
+        if k > n:
+            return 0
+        else:
+            return f1(k) + helper(k+1, f2, f1)
+
+    return helper(1, f_odd, f_even)
 
 
 def next_smaller_dollar(bill):
